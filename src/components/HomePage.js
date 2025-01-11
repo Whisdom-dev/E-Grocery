@@ -21,7 +21,7 @@ const HomePage = () => {
         style={{ backgroundImage: `url(${Hero})` }}
       >
         <div className="text-center  bg-opacity-85 p-6 rounded-lg">
-          <h1 className="text-6xl font-bold text-black-800 mb-4">Welcome to E-Grocery!</h1>
+          <h1 className="text-4xl font-bold text-black-800 mb-4">Welcome to E-Grocery!</h1>
           <p className="text-lg font-semibold text-black-700 mb-6">
             Discover the best deals on amazing products. Shop with ease and enjoy seamless online shopping.
           </p>

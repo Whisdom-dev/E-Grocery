@@ -48,3 +48,5 @@ const products = [
     { id: 15, name: 'Bread', price: 1.8, category: 'Bakery', image: Bread },
   ];
   
+
+  <Link to="#" className="mr-4 hover:underline">Contact</Link>

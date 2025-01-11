@@ -12,7 +12,6 @@ const Navbar = () => {
         <div>
           <Link to="/" className="mr-4 hover:underline">Home</Link>
           <Link to="/checkout" className="mr-4 hover:underline">Checkout</Link>
-          <Link to="#" className="mr-4 hover:underline">Contact</Link>
           <Link to="/cart" className="hover:underline">
             Cart: {cart.length > 0 ? `${cart.length} items` : "Empty"}
           </Link>
