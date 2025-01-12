@@ -13,7 +13,7 @@ const Navbar = () => {
           <Link to="/" className="mr-4 hover:underline">Home</Link>
           <Link to="/checkout" className="mr-4 hover:underline">Checkout</Link>
           <Link to="/cart" className="hover:underline">
-            Cart: {cart.length > 0 ? `${cart.length} items` : "Empty"}
+            Cart: {cart.length > 0 ? `${cart.length} ` : "0"}
           </Link>
         </div>
       </div>
