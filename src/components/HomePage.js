@@ -17,30 +17,33 @@ const HomePage = () => {
     <div className="bg-gray-300 min-h-screen">
       {/* Hero Section */}
       <div
-        className="bg-center h-96 flex items-center justify-center"
-        style={{ backgroundImage: `url(${Hero})` }}
+  className="bg-center bg-cover h-64 sm:h-80 md:h-96 lg:h-[500px] flex items-center justify-center"
+  style={{ backgroundImage: `url(${Hero})` }}
+>
+  <div className="text-center  bg-opacity-20 p-4 sm:p-6 rounded-lg max-w-xs sm:max-w-md md:max-w-lg">
+    <h1 className="lg:text-4xl sm:text-3xl md:text-4xl font-bold text-black-800 mb-4">
+      Welcome to E-Grocery!
+    </h1>
+    <p className="text-sm sm:text-base md:text-lg font-semibold text-black-700 mb-6">
+      Discover the best deals on amazing products. Shop with ease and enjoy seamless online shopping.
+    </p>
+    <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <Link
+        to="/products"
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
       >
-        <div className="text-center  bg-opacity-85 p-6 rounded-lg">
-          <h1 className="text-4xl font-bold text-black-800 mb-4">Welcome to E-Grocery!</h1>
-          <p className="text-lg font-semibold text-black-700 mb-6">
-            Discover the best deals on amazing products. Shop with ease and enjoy seamless online shopping.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link
-              to="/products"
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
-            >
-              Shop Now
-            </Link>
-            <Link
-              to="/cart"
-              className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 transition"
-            >
-              View Cart
-            </Link>
-          </div>
-        </div>
-      </div>
+        Shop Now
+      </Link>
+      <Link
+        to="/cart"
+        className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 transition"
+      >
+        View Cart
+      </Link>
+    </div>
+  </div>
+</div>
+
 
      
 
@@ -101,7 +104,7 @@ const HomePage = () => {
        {/* Categories Section */}
        <div className="py-8 px-4 bg-gray-200">
         <h2 className="text-2xl font-semibold text-center mb-6">Shop by Categories</h2>
-        <div className="grid grid-cols-1 rounded-lg shadow-md sm:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 rounded-lg shadow-md sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center">
             <img
               src={Fruits}
