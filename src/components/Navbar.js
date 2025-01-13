@@ -6,7 +6,7 @@ const Navbar = () => {
   const { cart } = useContext(CartContext);
 
   return (
-    <nav className="bg-blue-500 p-4 shadow-md text-white">
+    <nav className="bg-blue-600 p-4 shadow-md text-white">
       <div className="flex justify-between items-center">
         <h1 className="text-2xl font-bold">E-Grocery</h1>
         <div>
