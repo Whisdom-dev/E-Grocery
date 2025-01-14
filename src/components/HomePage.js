@@ -4,6 +4,7 @@ import Hero from '../images/Hero.jpg'; // Example hero image
 import Fruits from '../images/Fruits.jpg'; // Example category icon
 import Vegetables from '../images/Vegetables.jpg'; // Example category icon
 import Clean from '../images/Clean.jpg'; // Example category icon
+import Coffee from '../images/Coffee.jpeg';
 import Testimonial from '../images/Testimonial.jpg'; // Example testimonial image
 import Testimonial2 from '../images/Testimonial2.jpeg';
 import NewsletterForm from './NewsLetterForm';
@@ -104,12 +105,12 @@ const HomePage = () => {
        {/* Categories Section */}
        <div className="py-8 px-4 bg-gray-200">
         <h2 className="text-2xl font-semibold text-center mb-6">Shop by Categories</h2>
-        <div className="grid grid-cols-1 rounded-lg shadow-md sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 items:center rounded-lg shadow-md sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="text-center">
             <img
               src={Fruits}
               alt="Fruits"
-              className="w-50 h-50 mx-auto object-cover rounded-lg mb-3"
+              className="w-full h-40 object-cover mx-auto rounded-lg mb-3"
             />
             <h3 className="text-lg font-bold">Fruits</h3>
             <Link
@@ -123,7 +124,7 @@ const HomePage = () => {
             <img
               src={Vegetables}
               alt="Vegetables"
-              className="w-50 h-50 mx-auto object-cover rounded-lg mb-3"
+              className="w-full h-40 object-cover mx-auto rounded-lg mb-3"
             />
             <h3 className="text-lg font-bold">Vegetables</h3>
             <Link
@@ -137,7 +138,7 @@ const HomePage = () => {
             <img
               src={Clean}
               alt="Cleaning"
-              className="w-50 h-50 mx-auto object-cover rounded-lg mb-3"
+              className="w-full h-40 object-cover mx-auto rounded-lg mb-3"
             />
             <h3 className="text-lg font-bold">Cleaning</h3>
             <Link
@@ -145,6 +146,20 @@ const HomePage = () => {
               className="text-blue-500 hover:underline"
             >
               More Cleaning Supplies
+            </Link>
+          </div>
+          <div className="text-center">
+            <img
+              src={Coffee}
+              alt="Cleaning"
+              className="w-full h-40 object-cover mx-auto rounded-lg mb-3"
+            />
+            <h3 className="text-lg font-bold">Cleaning</h3>
+            <Link
+              to="/products?category=Cleaning"
+              className="text-blue-500 hover:underline"
+            >
+              More Beverages 
             </Link>
           </div>
         </div>
