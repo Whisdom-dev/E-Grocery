@@ -17,7 +17,7 @@ const Checkout = ({ cart }) => {
             : 'bg-green-500 hover:bg-green-600'
         } transition-colors duration-300`}
       >
-        Proceed to Checkout
+        Complete Purchase
       </button>
     </div>
   );

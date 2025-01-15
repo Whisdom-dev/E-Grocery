@@ -11,6 +11,7 @@ import NewsletterForm from './NewsLetterForm';
 import Apples from '../images/Apples.jpg';
 import Carrot from '../images/Carrot.jpg';
 import Banana from '../images/Banana.jpg';
+import Bread from '../images/Bread.jpg';
 
 
 const HomePage = () => {
@@ -45,15 +46,12 @@ const HomePage = () => {
   </div>
 </div>
 
-
-     
-
-      {/* Featured Products */}
+          {/* Featured Products */}
       <div className="py-8 px-4 bg-gray-100">
         <h2 className="text-2xl font-semibold text-center mb-6">Featured Products</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Example featured product */}
-          <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
+          <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
             <img
               src={Apples}
               alt="Apples"
@@ -68,7 +66,7 @@ const HomePage = () => {
               View Details
             </Link>
           </div>
-          <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
+          <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
           <img
               src={Carrot}
               alt="Carrot"
@@ -83,7 +81,7 @@ const HomePage = () => {
               View Details
             </Link>
           </div>
-          <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
+          <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
           <img
               src={Banana}
               alt="Banana"
@@ -91,6 +89,21 @@ const HomePage = () => {
             />
             <h3 className="text-lg font-bold mb-2">Fresh Bananas</h3>
             <p className="text-gray-700 mb-4">$0.50 each</p>
+            <Link
+              to="/products/1"
+              className="text-blue-500 hover:underline"
+            >
+              View Details
+            </Link>
+          </div>
+          <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
+          <img
+              src={Bread}
+              alt="Carrot"
+              className="w-full h-40 object-cover rounded-lg mb-3"
+            />
+            <h3 className="text-lg font-bold mb-2">Fresh Bread</h3>
+            <p className="text-gray-700 mb-4">$0.80 each</p>
             <Link
               to="/products/1"
               className="text-blue-500 hover:underline"
@@ -154,7 +167,7 @@ const HomePage = () => {
               alt="Cleaning"
               className="w-full h-40 object-cover mx-auto rounded-lg mb-3"
             />
-            <h3 className="text-lg font-bold">Cleaning</h3>
+            <h3 className="text-lg font-bold">Beverages</h3>
             <Link
               to="/products?category=Cleaning"
               className="text-blue-500 hover:underline"

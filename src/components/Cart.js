@@ -61,6 +61,7 @@ function Cart() {
           <p className="mt-4 text-lg">
             Total: <span className="font-bold">${total.toFixed(2)}</span>
           </p>
+          <Link to="/checkout">
           <button
             disabled={cart.length === 0}
             className={`mt-4 w-full py-2 rounded-lg text-white ${
@@ -71,6 +72,7 @@ function Cart() {
           >
             Proceed to Checkout
           </button>
+          </Link>
         </div>
       )}
     </div>
