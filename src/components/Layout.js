@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from './Navbar'; // Navbar component
-import { Outlet } from 'react-router-dom'; // Outlet for nested routes
+import Navbar from './Navbar';
+import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
     <div>
-      <Navbar /> {/* Always visible */}
+      <Navbar />
       <div className="p-4">
-        <Outlet /> {/* Render child routes */}
+        <Outlet />
       </div>
     </div>
   );

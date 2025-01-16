@@ -1,10 +1,11 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import Login from './components/Login';
 
 // Create a Context for Cart
 export const CartContext = createContext();
@@ -42,15 +43,40 @@ const App = () => {
     setCart(cart.filter((item) => item.id !== productId));
   };
 
+  // Authentication state
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // PrivateRoute Component
+  const PrivateRoute = ({ element, ...rest }) => {
+    return isAuthenticated ? (
+      element
+    ) : (
+      <Navigate to="/login" replace />
+    );
+  };
+
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       <Router>
-        <Navbar />
+        <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductList />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout cart={cart} />} />
+          <Route
+            path="/login"
+            element={<Login setIsAuthenticated={setIsAuthenticated} />}
+          />
+
+          {/* Protected Routes */}
+          <Route
+            path="/cart"
+            element={<PrivateRoute element={<Cart />} />}
+          />
+          <Route
+            path="/checkout"
+            element={<PrivateRoute element={<Checkout cart={cart} />} />}
+          />
         </Routes>
       </Router>
     </CartContext.Provider>
