@@ -6,6 +6,7 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Login from './components/Login';
+import ForgotPassword from './components/ForgotPassword';
 
 // Create a Context for Cart
 export const CartContext = createContext();
@@ -67,6 +68,8 @@ const App = () => {
             path="/login"
             element={<Login setIsAuthenticated={setIsAuthenticated} />}
           />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+
 
           {/* Protected Routes */}
           <Route

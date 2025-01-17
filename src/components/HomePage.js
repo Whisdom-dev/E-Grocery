@@ -88,7 +88,7 @@ const HomePage = () => {
               className="w-full h-40 object-cover rounded-lg mb-3"
             />
             <h3 className="text-lg font-bold mb-2">Fresh Meat</h3>
-            <p className="text-gray-700 mb-4">$0.50 each</p>
+            <p className="text-gray-700 mb-4">$12.00 each</p>
             <Link
               to="/products/1"
               className="text-blue-500 hover:underline"
