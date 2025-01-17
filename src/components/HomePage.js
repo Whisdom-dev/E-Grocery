@@ -10,7 +10,7 @@ import Testimonial2 from '../images/Testimonial2.jpeg';
 import NewsletterForm from './NewsLetterForm';
 import Apples from '../images/Apples.jpg';
 import Carrot from '../images/Carrot.jpg';
-import Banana from '../images/Banana.jpg';
+import BeefSteak from '../images/BeefSteak.jpeg';
 import Bread from '../images/Bread.jpg';
 
 
@@ -40,14 +40,14 @@ const HomePage = () => {
         to="/cart"
         className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 transition"
       >
-        View Cart
+        View Cart 
       </Link>
     </div>
   </div>
 </div>
 
           {/* Featured Products */}
-      <div className="py-8 px-4 bg-gray-100">
+      <div className="py-8 px-4 bg-gray-300">
         <h2 className="text-2xl font-semibold text-center mb-6">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Example featured product */}
@@ -83,11 +83,11 @@ const HomePage = () => {
           </div>
           <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
           <img
-              src={Banana}
-              alt="Banana"
+              src={BeefSteak}
+              alt="BeefSteak"
               className="w-full h-40 object-cover rounded-lg mb-3"
             />
-            <h3 className="text-lg font-bold mb-2">Fresh Bananas</h3>
+            <h3 className="text-lg font-bold mb-2">Fresh Meat</h3>
             <p className="text-gray-700 mb-4">$0.50 each</p>
             <Link
               to="/products/1"
