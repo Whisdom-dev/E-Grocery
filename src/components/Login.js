@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Good from '../images/Good.jpeg';
 
 const Login = ({ setIsAuthenticated }) => {
@@ -21,8 +21,7 @@ const Login = ({ setIsAuthenticated }) => {
 
   return (
     <div
-      className="flex bg-cover bg-gray-100 items-center justify-center h-screen w-full" 
-    >
+      className="flex bg-cover bg-gray-100 items-center justify-center h-screen w-full">
       <form
         onSubmit={handleLogin}
         className="bg-white p-8 sm:p-6 md:p-10 rounded-lg shadow-2xl w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 max-w-md"
@@ -31,7 +30,7 @@ const Login = ({ setIsAuthenticated }) => {
           Welcome Back
         </h2>
         <div className="mb-4 sm:mb-6">
-          <label className="block mb-2 font-medium text-gray-1000 text-sm sm:text-lg">
+          <label className="block mb-2 font-medium text-gray-700 text-sm sm:text-lg">
             Username
           </label>
           <input
@@ -44,7 +43,7 @@ const Login = ({ setIsAuthenticated }) => {
           />
         </div>
         <div className="mb-6 sm:mb-8">
-          <label className="block mb-2 font-medium text-gray-1000 text-sm sm:text-lg">
+          <label className="block mb-2 font-medium text-gray-700 text-sm sm:text-lg">
             Password
           </label>
           <input
@@ -78,7 +77,16 @@ const Login = ({ setIsAuthenticated }) => {
             Forgot Password?
           </a>
         </div>
-        <div className="mt-2 sm:mt-4">
+        <div className="mt-4 sm:mt-6">
+          <p className="text-center text-sm sm:text-base text-gray-600 mb-2">
+            New user?{' '}
+            <Link
+              to="/signup"
+              className="text-blue-500 hover:underline font-medium"
+            >
+               create an account
+            </Link>
+          </p>
           <button className="bg-gray-500 text-white px-4 py-2 rounded text-sm sm:text-lg hover:bg-gray-600 transition w-full mb-2">
             Login with Google
           </button>

@@ -7,6 +7,8 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
+import ScrollToTop from './components/ScrollToTop';
+import SignUp from './components/SignUp';
 
 // Create a Context for Cart
 export const CartContext = createContext();
@@ -60,6 +62,7 @@ const App = () => {
     <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       <Router>
         <Navbar isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+        <ScrollToTop />
         <Routes>
           {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
@@ -68,6 +71,7 @@ const App = () => {
             path="/login"
             element={<Login setIsAuthenticated={setIsAuthenticated} />}
           />
+           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
 
 

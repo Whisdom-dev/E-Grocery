@@ -69,7 +69,7 @@ const ProductList = () => {
   });
 
   return (
-    <div className="cover bg-gray-300 min-h-screen mx-auto p-4">
+    <div className="cover bg-gray-200 min-h-screen mx-auto p-4">
       <h1 className="text-3xl font-bold text-center mb-6">Grocery Store</h1>
 
       {/* Search and Filter */}

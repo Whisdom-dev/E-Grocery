@@ -30,7 +30,7 @@ const HomePage = () => {
 
   
   return (
-    <div className="bg-gray-300 min-h-screen">
+    <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
       <div
   className="bg-center bg-cover h-64 sm:h-80 md:h-96 lg:h-[500px] flex items-center justify-center"
@@ -52,7 +52,7 @@ const HomePage = () => {
       </Link>
       <Link
         to="/cart"
-        className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-300 transition"
+        className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-400 transition"
       >
         View Cart 
       </Link>
@@ -61,7 +61,7 @@ const HomePage = () => {
 </div>
 
           {/* Featured Products */}
-      <div className="py-8 px-4 bg-gray-300">
+      <div className="py-8 px-4 bg-gray-100">
         <h2 className="text-2xl font-semibold text-center mb-6">Featured Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Example featured product */}
@@ -130,7 +130,7 @@ const HomePage = () => {
       </div>
 
        {/* Categories Section */}
-       <div className="py-8 px-4 bg-gray-200">
+       <div className="py-8 px-4 bg-gray-100">
         <h2 className="text-2xl font-semibold text-center mb-6">Shop by Categories</h2>
         <div className="grid grid-cols-1 items:center rounded-lg shadow-md sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="text-center">
@@ -233,7 +233,7 @@ const HomePage = () => {
       </div>
 
        {/* FAQ Section */}
-       <div className="py-8 px-4 bg-gray-200">
+       <div className="py-8 px-4 bg-gray-100">
         <h2 className="text-2xl font-semibold text-center mb-6">Frequently Asked Questions</h2>
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
