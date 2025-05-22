@@ -7,6 +7,7 @@ function Cart() {
 
   // Calculate total price
   const total = cart.reduce((sum, item) => sum + item.price, 0);
+  
 
   return (
     <div className="container bg-gray-200 mx-auto p-6">

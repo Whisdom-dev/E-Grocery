@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Hero from '../images/Hero.jpg'; // Example hero image
-import Fruits from '../images/Fruits.jpg'; // Example category icon
-import Vegetables from '../images/Vegetables.jpg'; // Example category icon
-import Clean from '../images/Clean.jpg'; // Example category icon
+import B from '../images/B.avif'; 
+import Fruits from '../images/Fruits.jpg'; 
+import Vegetables from '../images/Vegetables.jpg'; 
+import Clean from '../images/Clean.jpg'; 
 import Coffee from '../images/Coffee.jpeg';
-import Testimonial from '../images/Testimonial.jpg'; // Example testimonial image
+import Testimonial from '../images/Testimonial.jpg'; 
 import Testimonial2 from '../images/Testimonial2.jpeg';
 import NewsletterForm from './NewsLetterForm';
 import Apples from '../images/Apples.jpg';
 import Carrot from '../images/Carrot.jpg';
 import BeefSteak from '../images/BeefSteak.jpeg';
 import Bread from '../images/Bread.jpg';
+
 
 
 const HomePage = () => {
@@ -34,19 +35,22 @@ const HomePage = () => {
       {/* Hero Section */}
       <div
   className="bg-center bg-cover h-64 sm:h-80 md:h-96 lg:h-[500px] flex items-center justify-center"
-  style={{ backgroundImage: `url(${Hero})` }}
+  style={{ backgroundImage: `url(${B})` }}
 >
-  <div className="text-center  bg-opacity-20 p-4 sm:p-6 rounded-lg max-w-xs sm:max-w-md md:max-w-lg">
-    <h1 className="lg:text-4xl sm:text-3xl md:text-4xl font-bold text-black-800 mb-4">
+  <div className="flex items-center justify-center min-h-screen text-center px-4">
+  <div>
+    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black whitespace-nowrap">
       Welcome to E-Grocery!
     </h1>
-    <p className="text-sm sm:text-base md:text-lg font-semibold text-black-700 mb-6">
+
+    <p className="text-sm sm:text-base md:text-lg font-semibold text-black mb-6">
       Discover the best deals on amazing products. Shop with ease and enjoy seamless online shopping.
     </p>
+
     <div className="flex flex-col sm:flex-row justify-center gap-4">
       <Link
         to="/products"
-        className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+        className="px-6 py-3 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-700 transition"
       >
         Shop Now
       </Link>
@@ -54,10 +58,13 @@ const HomePage = () => {
         to="/cart"
         className="px-6 py-3 bg-gray-200 text-gray-800 rounded-lg shadow hover:bg-gray-400 transition"
       >
-        View Cart 
+        View Cart
       </Link>
     </div>
   </div>
+</div>
+
+
 </div>
 
           {/* Featured Products */}
@@ -205,7 +212,7 @@ const HomePage = () => {
           <p className="text-lg italic">
             "E-Grocery has changed the way I shop for groceries. The quality is always top-notch, and delivery is so fast!"
           </p>
-          <p className="text-gray-700 font-semibold mt-2">- John Doe</p>
+          <p className="text-gray-700 font-semibold mt-2">- Emilia C  </p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
           <img
