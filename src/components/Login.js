@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Good from '../images/Good.jpeg';
+
 
 const Login = ({ setIsAuthenticated }) => {
   const [username, setUsername] = useState('');

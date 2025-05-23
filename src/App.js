@@ -9,6 +9,7 @@ import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
 import ScrollToTop from './components/ScrollToTop';
 import SignUp from './components/SignUp';
+import OrderHistory from './components/OrderHistory';
 
 // Create a Context for Cart
 export const CartContext = createContext();
@@ -50,12 +51,8 @@ const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   // PrivateRoute Component
-  const PrivateRoute = ({ element, ...rest }) => {
-    return isAuthenticated ? (
-      element
-    ) : (
-      <Navigate to="/login" replace />
-    );
+  const PrivateRoute = ({ element }) => {
+    return isAuthenticated ? element : <Navigate to="/login" replace />;
   };
 
   return (
@@ -67,23 +64,14 @@ const App = () => {
           {/* Public Routes */}
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductList />} />
-          <Route
-            path="/login"
-            element={<Login setIsAuthenticated={setIsAuthenticated} />}
-          />
-           <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
 
-
           {/* Protected Routes */}
-          <Route
-            path="/cart"
-            element={<PrivateRoute element={<Cart />} />}
-          />
-          <Route
-            path="/checkout"
-            element={<PrivateRoute element={<Checkout cart={cart} />} />}
-          />
+          <Route path="/cart" element={<PrivateRoute element={<Cart />} />} />
+          <Route path="/checkout" element={<PrivateRoute element={<Checkout cart={cart} />} />} />
+          <Route path="/orders" element={<PrivateRoute element={<OrderHistory />} />} />
         </Routes>
       </Router>
     </CartContext.Provider>
